@@ -1,0 +1,12 @@
+���      }�(�TYPE��function��VALUE�}�(�__closure__�N�__code__�}�(h�code�h}�(�__doc__���code(argcount, posonlyargcount, kwonlyargcount, nlocals, stacksize,
+      flags, codestring, constants, names, varnames, filename, name,
+      firstlineno, lnotab[, freevars[, cellvars]])
+
+Create a code object.  Not for the faint of heart.��co_argcount�K�co_cellvars�}�(h�tuple�h]�u�co_code�}�(h�bytes�h]�(KdKK}KK|KKdKKkK KrK"K|KKtK K|K K�KKtKK|K K�KKK K9K K}KKqKK|KKSK eu�	co_consts�}�(h�tuple�h]�(NKK
+eu�co_filename��/home/nikita/second_lab/main.py��co_firstlineno�K
+�co_flags�KC�co_freevars�}�(h�tuple�h]�u�co_kwonlyargcount�K �	co_lnotab�}�(h�bytes�h]�(K KKKKKKKeu�co_name��func��co_names�}�(h�tuple�h]�(�func_2��func_1�eu�
+co_nlocals�K�co_posonlyargcount�K �co_stacksize�K�co_varnames�}�(h�tuple�h]�(�num��ans�euuu�__globals__�}�(h,}�(h�function�h}�(hNh}�(h�code�h}�(h
+hhKh
+}�(h�tuple�h]�uh}�(h�bytes�h]�(K|K KdKKK KSK euh}�(h�tuple�h]�(NKeuhhhK	hKCh}�(h�tuple�h]�uh!K h"}�(h�bytes�h]�(K Keuh&h,h(}�(h�tuple�h]�uh.Kh/K h0Kh1}�(h�tuple�h]�h5auuuh7}��__defaults__�N�__name__�h,uuh-}�(h�function�h}�(hNh}�(h�code�h}�(h
+hhKh
+}�(h�tuple�h]�uh}�(h�bytes�h]�(K|K KdKKK KSK euh}�(h�tuple�h]�(NKeuhhhKhKCh}�(h�tuple�h]�uh!K h"}�(h�bytes�h]�(K Keuh&h-h(}�(h�tuple�h]�uh.Kh/K h0Kh1}�(h�tuple�h]�h5auuuh7}�hUNhVh-uuuhUNhVh'uu.

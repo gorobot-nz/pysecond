@@ -1,0 +1,10 @@
+.eggs
+build
+consoleserialize.egg-info
+dist
+venv
+.idea
+htmlcov
+.coverage
+temp.json
+__pycache__
