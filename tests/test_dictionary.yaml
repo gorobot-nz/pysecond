@@ -1,6 +1,6 @@
 a1: 15
 a2: 15.99
-bruh:
+bruh: 
 	b6: tratatatata
 a3: null
 a4: 'hello, its me from A'
@@ -8,7 +8,7 @@ a6: true
 bleh: {}
 good_job: []
 a7: false
-a8:
+a8: 
 - 18
 - -81.99
 - fffhhr

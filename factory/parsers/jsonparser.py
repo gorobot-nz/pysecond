@@ -92,7 +92,7 @@ def loads(temp_str):
                     temp_i += 1
                 obj[key] = load_arr(str_obj[i:temp_i])
                 key = ""
-                i = temp_i
+                i = temp_i + 1
                 is_key = True
             elif str_obj[i] == '{':
                 braces += 1

@@ -10,12 +10,12 @@ VALUE:
 
 Create a code object.  Not for the faint of heart.'
 			co_argcount: 2
-			co_cellvars:
+			co_cellvars: 
 				TYPE: tuple
 				VALUE: []
-			co_code:
+			co_code: 
 				TYPE: bytes
-				VALUE:
+				VALUE: 
 				- 124
 				- 0
 				- 124
@@ -24,30 +24,30 @@ Create a code object.  Not for the faint of heart.'
 				- 0
 				- 83
 				- 0
-			co_consts:
+			co_consts: 
 				TYPE: tuple
-				VALUE:
+				VALUE: 
 				- null
-			co_filename: /home/nikita/second_lab/main.py
-			co_firstlineno: 5
-			co_flags: 67
-			co_freevars:
+			co_filename: /home/nikita/second_lab/tests/test_test.py
+			co_firstlineno: 22
+			co_flags: 83
+			co_freevars: 
 				TYPE: tuple
 				VALUE: []
 			co_kwonlyargcount: 0
-			co_lnotab:
+			co_lnotab: 
 				TYPE: bytes
 				VALUE: []
 			co_name: <lambda>
-			co_names:
+			co_names: 
 				TYPE: tuple
 				VALUE: []
 			co_nlocals: 2
 			co_posonlyargcount: 0
 			co_stacksize: 2
-			co_varnames:
+			co_varnames: 
 				TYPE: tuple
-				VALUE:
+				VALUE: 
 				- x
 				- y
 	__globals__: {}
