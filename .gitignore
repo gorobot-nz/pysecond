@@ -6,5 +6,5 @@ venv
 .idea
 htmlcov
 .coverage
-temp.json
+temp.toml
 __pycache__
