@@ -134,7 +134,7 @@ def loads(temp_str):
                     elif str_obj[temp_i] == ']':
                         brackets -= 1
                     temp_i += 1
-                    if temp_i >= len(str_obj):
+                    if temp_i > len(str_obj):
                         raise ValueError()
                 obj[key] = loads_arr(str_obj[i:temp_i-1])
                 i = temp_i + 1
@@ -172,7 +172,7 @@ def loads(temp_str):
                             raise KeyError()
                         key += str_obj[i]
                         i += 1
-                        if i >= len(str_obj):
+                        if i > len(str_obj):
                             raise ValueError()
                     i += 1
                     temp_i = find_last_index(str_obj, i, key)
@@ -208,7 +208,7 @@ def loads(temp_str):
                         elif str_obj[temp_i] == ']':
                             brackets -= 1
                         temp_i += 1
-                        if temp_i >= len(str_obj):
+                        if temp_i > len(str_obj):
                             raise ValueError()
                     obj.append(loads_arr(str_obj[i:temp_i - 1]))
                     i = temp_i + 1
@@ -218,7 +218,7 @@ def loads(temp_str):
                     temp_i = i
                     while str_obj[temp_i] != '\'':
                         temp_i += 1
-                        if temp_i >= len(str_obj):
+                        if temp_i > len(str_obj):
                             raise ValueError()
                     obj.append(str(str_obj[i:temp_i]))
                     i = temp_i + 1

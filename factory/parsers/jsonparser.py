@@ -90,7 +90,7 @@ def loads(temp_str):
                     elif str_obj[temp_i] == ']':
                         brackets -= 1
                     temp_i += 1
-                    if temp_i >= len(str_obj):
+                    if temp_i > len(str_obj):
                         raise ValueError()
                 obj[key] = load_arr(str_obj[i:temp_i])
                 key = ""
@@ -105,7 +105,7 @@ def loads(temp_str):
                     elif str_obj[temp_i] == '}':
                         braces -= 1
                     temp_i += 1
-                    if temp_i >= len(str_obj):
+                    if temp_i > len(str_obj):
                         raise ValueError()
                 obj[key] = loads_obj(str_obj[i:temp_i])
                 key = ""
@@ -118,7 +118,7 @@ def loads(temp_str):
                     if str_obj[temp_i] == '\'':
                         quotes = 0
                     temp_i += 1
-                    if temp_i >= len(str_obj):
+                    if temp_i > len(str_obj):
                         raise ValueError()
                 if is_key:
                     key = str_obj[(i+1):(temp_i-1)]
@@ -187,7 +187,7 @@ def loads(temp_str):
                         elif str_obj[temp_i] == ']':
                             brackets -= 1
                         temp_i += 1
-                        if temp_i >= len(str_obj):
+                        if temp_i > len(str_obj):
                             raise ValueError()
                     obj.append(load_arr(str_obj[i:temp_i]))
                     i = temp_i
@@ -200,7 +200,7 @@ def loads(temp_str):
                         elif str_obj[temp_i] == '}':
                             braces -= 1
                         temp_i += 1
-                        if temp_i >= len(str_obj):
+                        if temp_i > len(str_obj):
                             raise ValueError()
                     obj.append(loads_obj(str_obj[i:temp_i]))
                     i = temp_i
@@ -211,7 +211,7 @@ def loads(temp_str):
                         if str_obj[temp_i] == '\'':
                             quotes = 0
                         temp_i += 1
-                        if temp_i >= len(str_obj):
+                        if temp_i > len(str_obj):
                             raise ValueError()
                     obj.append(str_obj[i+1:temp_i-1])
                     i = temp_i

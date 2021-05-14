@@ -159,7 +159,7 @@ def loads(temp_str):
                 temp_i = i
                 while str_obj[temp_i] != '\'':
                     temp_i += 1
-                    if temp_i >= len(str_obj):
+                    if temp_i > len(str_obj):
                         raise ValueError()
                 obj[key] = str_obj[i:temp_i]
                 i = temp_i + 2
