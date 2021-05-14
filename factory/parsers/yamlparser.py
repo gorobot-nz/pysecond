@@ -138,12 +138,17 @@ def loads(temp_str):
                 i += 1
                 is_key = False
             elif str_obj[i] == '[':
+                if str_obj[i+1] != ']':
+                    raise ValueError()
                 obj[key] = list()
                 i += 3
                 is_key = True
                 key = ''
                 definition = ''
+                tab_counter = prev_tab_counter
             elif str_obj[i] == '{':
+                if str_obj[i+1] != '}':
+                    raise ValueError()
                 obj[key] = dict()
                 i += 3
                 is_key = True
@@ -154,15 +159,10 @@ def loads(temp_str):
                 temp_i = i
                 while str_obj[temp_i] != '\'':
                     temp_i += 1
+                    if temp_i >= len(str_obj):
+                        raise ValueError()
                 obj[key] = str_obj[i:temp_i]
                 i = temp_i + 2
-                is_key = True
-                key = ''
-                definition = ''
-                tab_counter = prev_tab_counter
-            elif str_obj[i] == '[':
-                obj[key] = list()
-                i += 3
                 is_key = True
                 key = ''
                 definition = ''
@@ -225,6 +225,8 @@ def loads(temp_str):
                 pos_min = False
                 i += 1
             elif str_obj[i] == '\'':
+                if pos_min:
+                    raise ValueError()
                 i += 1
                 temp_i = i
                 while str_obj[temp_i] != '\'':

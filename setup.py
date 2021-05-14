@@ -7,7 +7,7 @@ setup(
         'factory',
         'factory/parsers'
     ],
-    version='0.1.7.1',
+    version='0.1.7.2',
     description='Console serialize',
     author='gor0b0t',
     install_requires=[],

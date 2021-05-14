@@ -60,8 +60,10 @@ def parse_file(path: str):
     obj = None
     try:
         obj = parser.load(path)
-    except Exception as ex:
-        logging.error(ex)
+    except ValueError:
+        logging.error('Value error of the file')
+    except KeyError:
+        logging.error('Key error of the file')
     return obj
 
 

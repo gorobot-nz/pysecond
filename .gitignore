@@ -7,4 +7,5 @@ venv
 htmlcov
 .coverage
 temp.toml
+temp.json
 __pycache__

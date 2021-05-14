@@ -117,6 +117,8 @@ def loads(temp_str):
                 temp_i = i
                 while str_obj[temp_i] != '\'':
                     temp_i += 1
+                    if temp_i >= len(str_obj):
+                        raise ValueError()
                 obj[key] = str_obj[i:temp_i]
                 i = temp_i + 2
                 is_key = True
@@ -132,6 +134,8 @@ def loads(temp_str):
                     elif str_obj[temp_i] == ']':
                         brackets -= 1
                     temp_i += 1
+                    if temp_i >= len(str_obj):
+                        raise ValueError()
                 obj[key] = loads_arr(str_obj[i:temp_i-1])
                 i = temp_i + 1
                 is_key = True
@@ -139,6 +143,8 @@ def loads(temp_str):
                 definition = ''
             elif str_obj[i] == '\n':
                 if str_obj[i-1] != '\n':
+                    if is_key:
+                        raise ValueError()
                     if definition == 'true':
                         obj[key] = True
                     elif definition == 'false':
@@ -149,6 +155,8 @@ def loads(temp_str):
                         obj[key] = float(definition)
                     elif re.fullmatch(INT_REGEX, definition):
                         obj[key] = int(definition)
+                    else:
+                        raise ValueError()
                     is_key = True
                     key = ''
                     definition = ''
@@ -157,9 +165,15 @@ def loads(temp_str):
                     i += 2
                     if i == len(str_obj):
                         break
+                    if str_obj[i-1] != '[':
+                        raise KeyError()
                     while str_obj[i] != ']':
+                        if str_obj[i] == '[':
+                            raise KeyError()
                         key += str_obj[i]
                         i += 1
+                        if i >= len(str_obj):
+                            raise ValueError()
                     i += 1
                     temp_i = find_last_index(str_obj, i, key)
                     key = key[key.rfind('.')+1:]
@@ -194,6 +208,8 @@ def loads(temp_str):
                         elif str_obj[temp_i] == ']':
                             brackets -= 1
                         temp_i += 1
+                        if temp_i >= len(str_obj):
+                            raise ValueError()
                     obj.append(loads_arr(str_obj[i:temp_i - 1]))
                     i = temp_i + 1
                     definition = ''
@@ -202,6 +218,8 @@ def loads(temp_str):
                     temp_i = i
                     while str_obj[temp_i] != '\'':
                         temp_i += 1
+                        if temp_i >= len(str_obj):
+                            raise ValueError()
                     obj.append(str(str_obj[i:temp_i]))
                     i = temp_i + 1
                 elif str_obj[i] == ',':
@@ -215,6 +233,8 @@ def loads(temp_str):
                         obj.append(None)
                     elif re.fullmatch(INT_REGEX, definition):
                         obj.append(int(definition))
+                    else:
+                        raise ValueError()
                     definition = ''
                     i += 1
                 else:
@@ -233,6 +253,8 @@ def loads(temp_str):
                 obj.append(None)
             elif re.fullmatch(INT_REGEX, definition):
                 obj.append(int(definition))
+            else:
+                raise ValueError()
         return obj
 
     return loads_obj(temp_str)
